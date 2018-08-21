@@ -1,8 +1,17 @@
 
+.top-menu {
+    background: #1976d2;
+    padding: 2px 15px;
+}
+
+.logo {
+  max-height: 55px;
+}
+
 
 .courses {
     max-width: 400px;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .course-card {
