@@ -13,18 +13,7 @@
 
 <div class="courses">
 
-    <div class="course-card" *ngFor="let course of courses">
-
-        <div class="course-title">
-            {{course.description}}
-        </div>
-        <img width="300" alt="Angular Logo" [src]="course.iconUrl">
-
-        <div class="course-description">
-            {{course.longDescription}}
-        </div>
-
-    </div>
+    <course-card *ngFor="let course of courses" [course]="course"></course-card>
 
 </div>
 
