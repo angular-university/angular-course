@@ -1,20 +1,18 @@
 
-
 .course-card {
     margin-bottom: 40px;
     text-align: center;
     border-radius: 4px;
     padding: 20px 0;
-    box-shadow: 0 1px 16px 0 rgba(0,0,0,.2), 0 2px 8px 0 rgba(0,0,0,.14), 0 4px 8px -1px rgba(0,0,0,.12);
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, .2), 0 2px 8px 0 rgba(0, 0, 0, .14), 0 4px 8px -1px rgba(0, 0, 0, .12);
 }
 
-
-.course-title {
+.course-card .course-title {
     font-size: 27px;
     font-weight: bold;
 }
 
-.course-description {
+.course-card .course-description {
     max-width: 360px;
     margin: 0 auto;
     margin-top: 15px;
@@ -23,4 +21,13 @@
 .course-card img {
     border-radius: 4px;
     margin-top: 10px;
+}
+
+.course-card button {
+    margin-top: 20px;
+    height: 40px;
+    font-size: 20px;
+    background: #1a7ce7;
+    color: white;
+    border-radius: 4px;
 }
