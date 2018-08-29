@@ -9,12 +9,7 @@ import {Course} from './model/course';
 })
 export class AppComponent {
 
-
-    coreCourse = COURSES[0];
-
-    rxjsCourse = COURSES[1];
-
-    ngrxCourse = COURSES[2];
+    courses = COURSES;
 
     onCourseSelected(course:Course) {
 

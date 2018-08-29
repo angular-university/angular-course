@@ -1,4 +1,4 @@
-import {Component, EventEmitter, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {COURSES} from '../../db-data';
 import {Course} from '../model/course';
 
@@ -11,6 +11,9 @@ export class CourseCardComponent implements OnInit {
 
     @Input()
     course: Course;
+
+    @Input()
+    cardIndex: number;
 
     @Output('courseSelected')
     courseEmitter = new EventEmitter<Course>();

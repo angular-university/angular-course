@@ -15,5 +15,9 @@
 }
 
 
+course-card.is-first {
+    border-top: 2px solid grey;
+}
+
 
 
