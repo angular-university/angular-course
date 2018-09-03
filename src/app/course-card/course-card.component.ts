@@ -30,10 +30,17 @@ export class CourseCardComponent implements OnInit {
 
     onCourseViewed() {
 
-        console.log("card component - button clicked ...");
+        console.log('card component - button clicked ...');
 
         this.courseEmitter.emit(this.course);
 
     }
+
+    cardClasses() {
+        if (this.course.category == 'BEGINNER') {
+            return 'beginner';
+        }
+    }
+
 
 }
