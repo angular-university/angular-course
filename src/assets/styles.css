@@ -72,7 +72,11 @@ course-card.is-odd {
     display: inline;
 }
 
-
+.demo {
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 25px;
+}
 
 
 
