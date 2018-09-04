@@ -1,5 +1,4 @@
-<div class="course-card" *ngIf="course"
-     [ngClass]="cardClasses()">
+<div class="course-card" *ngIf="course">
 
     <div class="course-title">
         {{ cardIndex + ' ' + course.description }}
@@ -26,8 +25,6 @@
         <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
 
         <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
-
-        <div class="category" *ngSwitchDefault>All Levels</div>
 
     </div>
 
