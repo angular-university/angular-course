@@ -55,3 +55,21 @@ course-card.is-even {
 course-card.is-odd {
     background: lightcyan;
 }
+
+.course-category {
+    margin-top: 15px;
+}
+
+.category {
+    margin-top: 15px;
+    background: lightcyan;
+    font-size: 14px;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 2px 3px;
+    display: inline;
+}
+
+
+
