@@ -6,14 +6,15 @@
 </div>
 
 
-<div class="courses">
 
-    <course-card
-        *ngFor="let course of courses | slice:0:2  ;index as i;"
+<div class="courses" #container>
+
+    <course-card *ngFor="let course of courses"
             (courseSelected)="onCourseSelected($event)"
-                 [course]="course" [cardIndex]="i + 1">
+                 [course]="course">
 
     </course-card>
+
 
 </div>
 
