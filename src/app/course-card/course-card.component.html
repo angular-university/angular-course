@@ -4,19 +4,12 @@
         {{ cardIndex || '' + ' ' + course.description }}
     </div>
 
-    <img #courseImage width="300" alt="Angular Logo"
-         *ngIf="isImageVisible(); else noImage"
-         [src]="course.iconUrl">
 
-    <ng-template #noImage>
+    <ng-content select=".course-image"></ng-content>
 
-        <p>No image is available.</p>
 
-    </ng-template>
+    <ng-content select=".course-description"></ng-content>
 
-    <div class="course-description">
-        {{ course.longDescription }}
-    </div>
 
     <div class="course-category" [ngSwitch]="course.category">
 
