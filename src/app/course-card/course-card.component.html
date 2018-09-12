@@ -1,11 +1,11 @@
-<div class="course-card" *ngIf="course">
+<div class="course-card" *ngIf="course" #container>
 
     <div class="course-title">
         {{ cardIndex || '' + ' ' + course.description }}
     </div>
 
 
-    <ng-content select=".course-image"></ng-content>
+    <ng-content select="course-image"></ng-content>
 
 
     <ng-content select=".course-description"></ng-content>
