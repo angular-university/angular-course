@@ -78,7 +78,9 @@ course-card.is-odd {
     font-size: 25px;
 }
 
-
+.warn {
+  color:red;
+}
 
 
 
