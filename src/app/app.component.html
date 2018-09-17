@@ -7,9 +7,9 @@
 
 
 
-<div class="courses" *ngIf="courses[0] as course">
+<div class="courses">
 
-    <course-card
+    <course-card *ngFor="let course of courses"
             (courseSelected)="onCourseSelected($event)"
                  [course]="course">
 
