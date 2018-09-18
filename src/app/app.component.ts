@@ -19,26 +19,14 @@ export class AppComponent implements AfterViewInit {
 
     constructor() {
 
-
     }
-
 
     ngAfterViewInit() {
 
-
-
     }
-
-
-
 
     onCourseSelected(course:Course) {
 
-
-
-
     }
-
-
 
 }

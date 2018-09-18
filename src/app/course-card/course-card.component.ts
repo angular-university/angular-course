@@ -44,7 +44,6 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
     ngAfterViewInit() {
 
-
     }
 
     ngAfterContentInit() {
@@ -55,6 +54,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
 
     ngOnInit() {
+
     }
 
     isImageVisible() {
