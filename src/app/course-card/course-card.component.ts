@@ -8,7 +8,7 @@ import {
     EventEmitter,
     Input,
     OnInit,
-    Output, QueryList,
+    Output, QueryList, TemplateRef,
     ViewChild
 } from '@angular/core';
 import {COURSES} from '../../db-data';
@@ -24,6 +24,9 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
     @Input()
     course: Course;
+
+    @Input()
+    noImageTpl: TemplateRef<any>;
 
     @Input()
     cardIndex: number;

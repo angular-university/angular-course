@@ -6,7 +6,17 @@
     </div>
 
     <ng-content select="course-image"
-                *ngIf="course.iconUrl; else blankImage"></ng-content>
+                *ngIf="course.iconUrl; else noImage"></ng-content>
+
+    <ng-template #noImage>
+
+        <ng-container
+                *ngTemplateOutlet="noImageTpl;context: {description:course.description}">
+
+        </ng-container>
+
+
+    </ng-template>
 
 
     <ng-content select=".course-description"></ng-content>

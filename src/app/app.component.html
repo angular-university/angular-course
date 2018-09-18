@@ -9,8 +9,6 @@
 
 <div class="courses" *ngIf="courses[0] as course">
 
-
-
     <ng-template #blankImage let-courseName="description">
 
         <p class="warn">{{courseName}} has no image yet.</p>
@@ -19,19 +17,9 @@
 
     </ng-template>
 
-
-    <ng-container *ngTemplateOutlet="blankImage; context: {description: course.description}">
-
-    </ng-container>
-
-
-    <hr>
-    <hr>
-
-
     <course-card
             (courseSelected)="onCourseSelected($event)"
-                 [course]="course">
+                 [course]="course" [noImageTpl]="blankImage">
 
         <course-image [src]="course.iconUrl"></course-image>
 
