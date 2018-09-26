@@ -5,33 +5,44 @@
 
 </div>
 
+<div class="salmon-theme">
 
-<ng-template [ngIf]="courses[0]" let-course>
+    <div class="course-card">
 
-    <div class="courses">
-
-        <course-card highlighted #highlighter="hl"
-                     (toggleHighlight)="onToggle($event)"
-                     (courseSelected)="onCourseSelected($event)"
-                     [course]="course">
-
-
-            <course-image [src]="course.iconUrl"
-                          *ngxUnless="!course.iconUrl">
-
-            </course-image>
-
-
-            <div class="course-description"
-                 (dblclick)="highlighter.toggle()" >
-                {{ course.longDescription }}
-            </div>
-
-        </course-card>
+        Test Card
 
     </div>
 
-</ng-template>
+    <ng-template [ngIf]="courses[0]" let-course>
+
+        <div class="courses">
+
+            <course-card highlighted #highlighter="hl"
+                         (toggleHighlight)="onToggle($event)"
+                         (courseSelected)="onCourseSelected($event)"
+                         [course]="course">
+
+
+                <course-image [src]="course.iconUrl"
+                              *ngxUnless="!course.iconUrl">
+
+                </course-image>
+
+
+                <div class="course-description"
+                     (dblclick)="highlighter.toggle()" >
+                    {{ course.longDescription }}
+                </div>
+
+            </course-card>
+
+        </div>
+
+    </ng-template>
+
+
+</div>
+
 
 
 
