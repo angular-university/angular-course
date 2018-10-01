@@ -11,45 +11,37 @@ import {Observable} from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit, OnInit {
-
-    courses = COURSES;
-
-    @ViewChild(CourseCardComponent, {read:HighlightedDirective})
-    highlighted: HighlightedDirective;
-
-    @ViewChildren(CourseCardComponent, {read: ElementRef})
-    cards : QueryList<ElementRef>;
-
-    courses$: Observable<Course[]>;
+export class AppComponent implements OnInit {
 
 
-    constructor(private coursesService: CoursesService) {
-
-    }
-
-    ngOnInit() {
-      this.courses$ =  this.coursesService.loadCourses();
-    }
-
-    onToggle(isHighlighted:boolean) {
-
-        console.log(isHighlighted);
-
-    }
+  courses$: Observable<Course[]>;
 
 
-    ngAfterViewInit() {
 
-        console.log(this.highlighted);
+  constructor(private coursesService: CoursesService) {
 
+  }
 
-    }
+  ngOnInit() {
+    this.courses$ = this.coursesService.loadCourses();
+  }
 
-    saveCourse(course:Course) {
+  onToggle(isHighlighted: boolean) {
 
-      console.log('new course', course);
+    console.log(isHighlighted);
 
-    }
+  }
+
+  saveCourse(course: Course) {
+
+    console.log('new course', course);
+
+    this.coursesService.saveCourse(course)
+      .subscribe(
+        () => console.log('Course Saved!'),
+        console.error
+      );
+
+  }
 
 }

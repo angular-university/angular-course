@@ -19,7 +19,7 @@ import {CourseImageComponent} from '../course-image/course-image.component';
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class CourseCardComponent implements OnInit {
 
     @Input()
     course: Course;
@@ -30,18 +30,8 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     @Output('courseChanged')
     courseEmitter = new EventEmitter<Course>();
 
-    @ContentChildren(CourseImageComponent, {read: ElementRef})
-    images: QueryList<ElementRef>;
 
     constructor() {
-
-    }
-
-    ngAfterViewInit() {
-
-    }
-
-    ngAfterContentInit() {
 
     }
 
@@ -49,9 +39,6 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
     }
 
-    isImageVisible() {
-        return this.course && this.course.iconUrl;
-    }
 
     onSaveClicked(description:string) {
 
@@ -59,18 +46,6 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
 
     }
 
-    cardClasses() {
-        if (this.course.category == 'BEGINNER') {
-            return 'beginner';
-        }
-    }
-
-    cardStyles() {
-        return {
-            'background-image': 'url(' + this.course.iconUrl + ')'
-
-        };
-    }
 
 
 
