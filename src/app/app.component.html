@@ -7,15 +7,12 @@
 
 <div>
 
-  <div class="courses" *ngIf="courses$ | async as courses">
+  <div class="courses">
 
-    <course-card *ngFor="let course of courses" (courseChanged)="saveCourse($event)"
+    <course-card *ngFor="let course of courses"
                  [course]="course">
 
-      <course-image [src]="course.iconUrl"
-                    *ngxUnless="!course.iconUrl">
-
-      </course-image>
+      <course-image [src]="course.iconUrl"></course-image>
 
     </course-card>
 
