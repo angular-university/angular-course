@@ -10,8 +10,6 @@ export class CoursesService {
 
   constructor(private http: HttpClient) {
 
-
-
   }
 
   loadCourses() {

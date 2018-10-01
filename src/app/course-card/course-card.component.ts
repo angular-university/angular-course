@@ -27,7 +27,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     @Input()
     cardIndex: number;
 
-    @Output('courseSelected')
+    @Output('courseChanged')
     courseEmitter = new EventEmitter<Course>();
 
     @ContentChildren(CourseImageComponent, {read: ElementRef})
@@ -53,9 +53,9 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
         return this.course && this.course.iconUrl;
     }
 
-    onCourseViewed() {
+    onSaveClicked(description:string) {
 
-        this.courseEmitter.emit(this.course);
+        this.courseEmitter.emit({...this.course, description});
 
     }
 

@@ -1,35 +1,29 @@
-
 <div class="course-card" *ngIf="course" #container>
 
-    <div class="course-title">
-        {{ cardIndex || '' + ' ' + course.description }}
-    </div>
+  <div class="course-title">
+    {{ cardIndex || '' + ' ' + course.description }}
+  </div>
 
-    <ng-content select="course-image"
-                *ngIf="course.iconUrl; else noImage"></ng-content>
+  <ng-content select="course-image"
+              *ngIf="course.iconUrl"></ng-content>
 
-    <ng-template #noImage>
+  <div class="course-description">
 
-        <ng-container
-                *ngTemplateOutlet="noImageTpl;context: {description:course.description}">
+    Edit Title: <input #courseTitle [value]="course.description">
 
-        </ng-container>
+  </div>
 
-    </ng-template>
+  <div class="course-category" [ngSwitch]="course.category">
 
-    <ng-content select=".course-description"></ng-content>
+    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
 
-    <div class="course-category" [ngSwitch]="course.category">
+    <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
 
-        <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+    <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
 
-        <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+  </div>
 
-        <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
-
-    </div>
-
-    <button (click)="onCourseViewed()">View Course</button>
+  <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
 
 </div>
 

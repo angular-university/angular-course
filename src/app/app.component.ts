@@ -46,7 +46,9 @@ export class AppComponent implements AfterViewInit, OnInit {
 
     }
 
-    onCourseSelected(course:Course) {
+    saveCourse(course:Course) {
+
+      console.log('new course', course);
 
     }
 

@@ -9,18 +9,13 @@
 
   <div class="courses">
 
-    <course-card *ngFor="let course of courses" (courseSelected)="onCourseSelected($event)"
+    <course-card *ngFor="let course of courses" (courseChanged)="saveCourse($event)"
                  [course]="course">
-
 
       <course-image [src]="course.iconUrl"
                     *ngxUnless="!course.iconUrl">
 
       </course-image>
-
-      <div class="course-description">
-        {{ course.longDescription }}
-      </div>
 
     </course-card>
 
