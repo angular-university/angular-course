@@ -4,7 +4,7 @@ import {
     Component,
     ContentChildren,
     ElementRef,
-    EventEmitter,
+    EventEmitter, Inject,
     Input,
     OnInit,
     Output,
@@ -14,6 +14,7 @@ import {
 import {Course} from '../model/course';
 import {CourseImageComponent} from '../course-image/course-image.component';
 import {CoursesService} from '../services/courses.service';
+
 
 @Component({
     selector: 'course-card',
@@ -38,7 +39,7 @@ export class CourseCardComponent implements OnInit {
 
     ngOnInit() {
 
-        console.log("coursesService course card", this.coursesService);
+        console.log("coursesService course card" + this.coursesService.id);
 
     }
 
