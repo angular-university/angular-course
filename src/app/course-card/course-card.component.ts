@@ -6,9 +6,9 @@ import {
     ElementRef,
     EventEmitter, Inject,
     Input,
-    OnInit,
+    OnInit, Optional,
     Output,
-    QueryList,
+    QueryList, Self, SkipSelf,
     ViewEncapsulation
 } from '@angular/core';
 import {Course} from '../model/course';

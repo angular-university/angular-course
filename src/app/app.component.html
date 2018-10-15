@@ -9,7 +9,7 @@
 
   <div class="courses" *ngIf="courses$ | async as courses">
 
-    <course-card *ngFor="let course of courses"
+    <course-card highlighted *ngFor="let course of courses"
                  (courseChanged)="save($event)"
                  [course]="course">
 
