@@ -1,27 +1,25 @@
 import {
-    AfterContentInit,
-    AfterViewInit,
+    Attribute,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
-    ContentChildren,
-    ElementRef,
-    EventEmitter, Inject,
-    Input,
-    OnInit, Optional,
-    Output,
-    QueryList, Self, SkipSelf,
-    ViewEncapsulation
+    EventEmitter,
+    Input, OnChanges,
+    OnDestroy,
+    OnInit,
+    Output
 } from '@angular/core';
 import {Course} from '../model/course';
-import {CourseImageComponent} from '../course-image/course-image.component';
 import {CoursesService} from '../services/courses.service';
 
 
 @Component({
     selector: 'course-card',
     templateUrl: './course-card.component.html',
-    styleUrls: ['./course-card.component.css']
+    styleUrls: ['./course-card.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent implements OnInit, OnDestroy, OnChanges {
 
     @Input()
     course: Course;
@@ -33,12 +31,35 @@ export class CourseCardComponent implements OnInit {
     courseEmitter = new EventEmitter<Course>();
 
 
-    constructor(private coursesService: CoursesService) {
+    constructor(private coursesService: CoursesService,
+                @Attribute('type') private type: string) {
 
+
+        console.log('constructor', this.course);
+
+    }
+
+    ngOnChanges(changes) {
+
+        console.log("ngOnChanges", changes);
     }
 
     ngOnInit() {
 
+        console.log("ngOnInit", this.course);
+
+
+    }
+
+    ngOnDestroy() {
+
+        console.log("ngOnDestroy");
+
+    }
+
+    onTitleChanged(newTitle:string) {
+
+        this.course.description = newTitle;
 
     }
 
