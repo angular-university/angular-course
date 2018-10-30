@@ -10,8 +10,9 @@ import {
     OnInit,
     Output
 } from '@angular/core';
-import {Course} from '../model/course';
-import {CoursesService} from '../services/courses.service';
+import {Course} from '../../model/course';
+import {CoursesService} from '../courses.service';
+
 
 
 @Component({
@@ -19,10 +20,7 @@ import {CoursesService} from '../services/courses.service';
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements
-    OnInit, OnDestroy, OnChanges,
-    AfterContentChecked, AfterViewChecked,
-    AfterContentInit, AfterViewInit, DoCheck {
+export class CourseCardComponent implements  OnInit {
 
     @Input()
     course: Course;
@@ -40,52 +38,14 @@ export class CourseCardComponent implements
                 @Attribute('type') private type: string) {
 
 
-        console.log('constructor', this.course);
-
-    }
-
-    ngOnChanges(changes) {
-
-        console.log('ngOnChanges', changes);
     }
 
     ngOnInit() {
 
-        console.log('ngOnInit');
-
 
     }
 
-    ngDoCheck() {
-        console.log("ngDoCheck");
-    }
 
-    ngAfterContentInit() {
-        console.log("ngAfterContentInit");
-    }
-
-    ngAfterViewInit() {
-        console.log("ngAfterViewInit");
-    }
-
-
-    ngAfterContentChecked() {
-
-        console.log('ngAfterContentChecked');
-
-    }
-
-    ngAfterViewChecked() {
-
-        console.log('ngAfterViewChecked');
-
-    }
-
-    ngOnDestroy() {
-
-        console.log('ngOnDestroy');
-
-    }
 
     onTitleChanged(newTitle: string) {
 
