@@ -15,18 +15,13 @@ export class AppComponent implements OnInit {
 
     courses: Course[] = COURSES;
 
-
     constructor(
         private coursesService: CoursesService,
         @Inject(CONFIG_TOKEN) private config: AppConfig) {
 
-
     }
 
-
     ngOnInit() {
-
-
 
     }
 
@@ -41,16 +36,13 @@ export class AppComponent implements OnInit {
         };
 
         this.courses[0] = newCourse;
-
     }
 
     save(course: Course) {
-
         this.coursesService.saveCourse(course)
             .subscribe(
                 () => console.log('Course Saved!')
             );
-
     }
 
 

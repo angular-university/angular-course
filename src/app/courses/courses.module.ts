@@ -5,6 +5,7 @@ import {CourseImageComponent} from './course-image/course-image.component';
 import {CoursesService} from './courses.service';
 import {HighlightedDirective} from './directives/highlighted.directive';
 import {NgxUnlessDirective} from './directives/ngx-unless.directive';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [

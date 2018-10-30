@@ -31,13 +31,11 @@ export class CoursesService {
   }
 
   saveCourse(course:Course) {
-
       const headers = new HttpHeaders()
           .set("X-Auth", "userId");
 
       return this.http.put(`/api/courses/${course.id}`,
           course,{headers});
-
 
   }
 
