@@ -14,13 +14,20 @@
 
   </div>
 
-  <div class="course-category" [ngSwitch]="course.category">
+  <div class="course-category">
 
-    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+    <div class="category" i18n>
 
-    <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+        {
+            course.category,
+            select,
+            BEGINNER {Beginner}
+            INTERMEDIATE {Intermediate}
+            ADVANCED {Advanced}
+        }
 
-    <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
+    </div>
+
 
   </div>
 

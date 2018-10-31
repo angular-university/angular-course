@@ -9,13 +9,22 @@
 
   <div class="demo">
 
-      <button (click)="onEditCourse()">Edit Course</button>
+
+      <button (click)="onEditCourse()" i18n>Edit Course</button>
+
+
+      <div i18n>{ coursesTotal, plural, =0 {No courses available.}
+                    =1 {One course is available.}
+                    other {A total of {{coursesTotal}} courses are available.}  }</div>
 
   </div>
 
   <div class="courses">
 
-    <course-card *ngFor="let course of  courses | filterByCategory: 'BEGINNER' "
+      <h4 i18n="welcome message.|Greet the user a greeting at the beginning of the course.@@welcomeMessage">
+          Welcome to the Angular Core Deep Dive Course</h4>
+
+    <course-card *ngFor="let course of  courses  "
                  (courseChanged)="save($event)"
                  type="beginner"
                  [course]="course">
