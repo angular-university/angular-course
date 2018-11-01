@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+
+      <trans-unit id="3654d95b03eba8ec9ee0cf68463f50365bf6baa2" datatype="html">
+        <source>{VAR_SELECT, select, BEGINNER {Beginner} INTERMEDIATE {Intermediate} ADVANCED {Advanced} }</source>
+          <target>{VAR_SELECT, select, BEGINNER {Débutant} INTERMEDIATE {Intermediare} ADVANCED {Avancé} }</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/courses/course-card/course-card.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="756b2b2744938130877e47fd8e697024cb532092" datatype="html">
+        <source>Edit Course</source>
+          <target>Modifier des Cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ef485631d92fd33527cc7ae600c0b9b07c397825" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No courses available.} =1 {One course is available.} other {A total of <x id="INTERPOLATION" equiv-text="{{coursesTotal}}"/> courses are available.} }</source>
+          <target>{VAR_PLURAL, plural, =0 {Pas des cours disponible.} =1 {Un cours disponible.} other {Il y a <x id="INTERPOLATION" equiv-text="{{coursesTotal}}"/> cours disponible.} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcomeMessage" datatype="html">
+        <source>
+          Welcome to the Angular Core Deep Dive Course</source>
+        <target>Bienvenue au Cours Angular en Détail.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Greet the user a greeting at the beginning of the course.</note>
+        <note priority="1" from="meaning">welcome message.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

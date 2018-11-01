@@ -1,0 +1,57 @@
+
+
+
+.course-card img {
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+    height: 40px;
+    font-size: 20px;
+    background: #1a7ce7;
+    color: white;
+    border-radius: 4px;
+}
+
+
+
+
+
+.course-category {
+    margin-top: 15px;
+}
+
+.category {
+    margin-top: 15px;
+    background: lightcyan;
+    font-size: 14px;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 2px 3px;
+    display: inline;
+}
+
+.demo {
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 25px;
+}
+
+.warn {
+  color:red;
+}
+
+.highlighted {
+  box-shadow: 0 2px 16px 0 #de1e19, 0 3px 8px 0 rgba(226, 21, 19, 0.47), 0 6px 8px -1px #b41c18;
+}
+
+
+
+
+
+
+
+

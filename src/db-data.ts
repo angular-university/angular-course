@@ -7,8 +7,8 @@ export const COURSES: any = [
         description: "Angular Core Deep Dive",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
         longDescription: "A detailed walk-through of the most important part of Angular - the Core and Common modules",
-        category: 'ADVANCED',
-        lessonsCount: 10
+        lessonsCount: 10,
+        category: 'INTERMEDIATE'
     },
     {
         id: 2,
@@ -46,7 +46,7 @@ export const COURSES: any = [
     {
         id: 6,
         description: 'Angular PWA Course',
-        longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
+        longDescription: "Learn Angular Progressive Web Applications, build the future of the Web Today.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
         category: 'ADVANCED',
         lessonsCount: 8
@@ -84,5 +84,5 @@ export const COURSES: any = [
 
 
 export function findCourseById(courseId:number) {
-    return COURSES.find(course => course.id === courseId);
+    return COURSES.find(course => course.id == courseId);
 }
