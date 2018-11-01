@@ -31,6 +31,9 @@
             "scripts": [
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
+              },
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
               }
             ]
           },
@@ -52,7 +55,6 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
-
             "fr": {
               "aot": true,
               "outputPath": "dist/angular-course-fr/",
@@ -61,7 +63,6 @@
               "i18nLocale": "fr",
               "i18nMissingTranslation": "ignore"
             }
-
           }
         },
         "serve": {
