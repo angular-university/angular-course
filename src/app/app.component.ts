@@ -25,6 +25,8 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
 
+        const htmlElement = createCustomElement();
+
     }
 
     onEditCourse() {
