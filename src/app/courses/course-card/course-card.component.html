@@ -1,7 +1,9 @@
 <div class="course-card" *ngIf="course" #container>
 
   <div class="course-title">
-    {{ cardIndex || '' + ' ' + course.description }}
+
+      {{ cardIndex || '' + ' ' + course.description }}
+
   </div>
 
   <ng-content select="course-image"
