@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
 
     courses = COURSES;
 
-    @ViewChild(CourseCardComponent, {read:HighlightedDirective})
+    @ViewChild(CourseCardComponent, {read:HighlightedDirective, static:false})
     highlighted: HighlightedDirective;
 
     @ViewChildren(CourseCardComponent, {read: ElementRef})
