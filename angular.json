@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-course": {
+      "i18n": {
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,6 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/angular-course",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -39,6 +48,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -57,9 +72,14 @@
             },
             "fr": {
               "aot": true,
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "outputPath": "dist/angular-course-fr/",
               "i18nFile": "src/locale/messages.fr.xlf",
-              "i18nFormat": "xlf",
               "i18nLocale": "fr",
               "i18nMissingTranslation": "ignore"
             }
@@ -147,5 +167,8 @@
       }
     }
   },
-  "defaultProject": "angular-course"
+  "defaultProject": "angular-course",
+  "cli": {
+    "analytics": "e878a578-eb4f-4c7c-bbaf-6f0c4ac42135"
+  }
 }
