@@ -19,6 +19,7 @@
     "@angular/core": "^9.0.1",
     "@angular/elements": "^9.0.1",
     "@angular/forms": "^9.0.1",
+    "@angular/localize": "^9.0.2",
     "@angular/material": "^9.0.0",
     "@angular/platform-browser": "^9.0.1",
     "@angular/platform-browser-dynamic": "^9.0.1",
