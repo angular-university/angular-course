@@ -19,6 +19,7 @@
     "@angular/core": "^8.0.0",
     "@angular/elements": "^8.0.0",
     "@angular/forms": "^8.0.0",
+    "@angular/localize": "^9.0.2",
     "@angular/material": "^8.0.0",
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
@@ -31,7 +32,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.0",
+    "@angular-devkit/build-angular": "^0.900.3",
     "@angular/cli": "^8.0.1",
     "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "^8.0.0",
