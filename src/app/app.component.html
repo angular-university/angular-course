@@ -9,9 +9,10 @@
 <div class="courses">
   <!-- there is an instance of the course card component for each card -->
   <!-- we have defined course : Course as an attribute of course card component -->
-  <course-card [course]="coreCourse"></course-card>
-  <course-card [course]="rjsCourse"></course-card>
-  <course-card [course]="ngrxCourse"></course-card>
+  <!-- courseSelected is not a standard dom event -->
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></course-card>
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="rjsCourse"></course-card>
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></course-card>
 <!-- we can see that the course card is visible because we have added this html in our AppComponent template -->
 
 

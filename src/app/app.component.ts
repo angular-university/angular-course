@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +18,14 @@ export class AppComponent {
 //     category: 'INTERMEDIATE',
 //     lessonsCount: 10
 // }
-// these are defined in db-data.ts 
+// these are defined in db-data.ts
+// bexause we are displaying these in the template of the app component
     coreCourse = COURSES[0];
     rjsCourse = COURSES[1];
     ngrxCourse = COURSES[2];
+    onCourseSelected(course: Course) {
+      console.log("App component - click event bubbled...", course)
+    }
 
 
 }
