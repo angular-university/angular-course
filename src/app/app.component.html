@@ -8,10 +8,10 @@
 
 <div class="courses">
   <!-- there is an instance of the course card component for each card -->
-  <!-- we can do this because in card component we have defined tile as an input property -->
-  <course-card [title]="coreCourse.description"></course-card>
-  <course-card [title]="rjsCourse.description"></course-card>
-  <course-card [title]="ngrxCourse.description"></course-card>
+  <!-- we have defined course : Course as an attribute of course card component -->
+  <course-card [course]="coreCourse"></course-card>
+  <course-card [course]="rjsCourse"></course-card>
+  <course-card [course]="ngrxCourse"></course-card>
 <!-- we can see that the course card is visible because we have added this html in our AppComponent template -->
 
 

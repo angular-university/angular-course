@@ -17,6 +17,7 @@ export class AppComponent {
 //     category: 'INTERMEDIATE',
 //     lessonsCount: 10
 // }
+// these are defined in db-data.ts 
     coreCourse = COURSES[0];
     rjsCourse = COURSES[1];
     ngrxCourse = COURSES[2];

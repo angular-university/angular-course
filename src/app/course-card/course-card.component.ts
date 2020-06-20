@@ -1,4 +1,6 @@
 import { Component, OnInit , Input} from '@angular/core';
+import { COURSES } from '../../db-data';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'course-card', // defines html tag
@@ -8,7 +10,7 @@ import { Component, OnInit , Input} from '@angular/core';
 export class CourseCardComponent implements OnInit {
 //need to import Input or it will not compile!!
   @Input()
-  title:string; //  we define as an input property of the course card, now to the template
+  course: Course; //  from the model folder
 
   constructor() { }
 
