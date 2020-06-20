@@ -7,7 +7,11 @@ import {COURSES} from '../db-data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+// this is how we make available the course objects so that we can display different course cards
+// now these are available in the AppComponent template
+    coreCourse = COURSES[0];
+    rjsCourse = COURSES[1];
+    ngrxCourse = COURSES[2];
 
-// comment
 
 }
