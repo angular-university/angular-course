@@ -4,15 +4,14 @@
          src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
 </div>
-<!-- displays the title of the course -->
-<h1>{{coreCourse.description}}</h1>
 
 
 <div class="courses">
-  <!-- we would like to be able to display different info for each cards -->
-  <course-card title="coreCourse.description"></course-card>
-  <course-card></course-card>
-  <course-card></course-card>
+  <!-- there is an instance of the course card component for each card -->
+  <!-- we can do this because in card component we have defined tile as an input property -->
+  <course-card [title]="coreCourse.description"></course-card>
+  <course-card [title]="rjsCourse.description"></course-card>
+  <course-card [title]="ngrxCourse.description"></course-card>
 <!-- we can see that the course card is visible because we have added this html in our AppComponent template -->
 
 
