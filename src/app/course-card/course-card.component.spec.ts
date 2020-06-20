@@ -23,3 +23,4 @@ describe('CourseCardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+// another comment

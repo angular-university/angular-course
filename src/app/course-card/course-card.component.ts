@@ -13,3 +13,4 @@ export class CourseCardComponent implements OnInit {
   }
 
 }
+// comment
