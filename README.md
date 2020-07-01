@@ -3,7 +3,7 @@
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
-This course repository is updated to Angular v8, and there is a  package-lock.json file available, for avoiding semantic versioning installation issues.
+This course repository is updated to Angular v10, and there is a  package-lock.json file available, for avoiding semantic versioning installation issues.
 
 ![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
 
