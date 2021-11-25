@@ -3,14 +3,14 @@
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
-This course repository is updated to Angular v12.
+This course repository is updated to Angular v13:
 
 ![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
 
 
 # Installation pre-requisites
 
-IMPORTANT: Please use Node 14 (Long Term Support version).
+IMPORTANT: Please use Node 16 (Long Term Support version).
 
 # Installing the Angular CLI
 
