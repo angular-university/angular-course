@@ -1,5 +1,5 @@
 
-course-card {
+app-course-card {
   display: block;
 }
 
@@ -14,13 +14,14 @@ course-card {
 .course-card .course-title {
   font-size: 27px;
   font-weight: bold;
+  color: white;
 }
 
 .course-card .course-description {
   max-width: 360px;
-  margin: 0 auto;
-  margin-top: 15px;
+  margin: 15px auto 0;
   user-select: none;
+  color: white;
 }
 
 .course-card img {
@@ -37,21 +38,21 @@ button {
   border-radius: 4px;
 }
 
-course-card.is-first {
+app-course-card.is-first {
   border-top: 2px solid grey;
   padding-top: 20px;
 }
 
-course-card.is-last {
+app-course-card.is-last {
   border-bottom: 2px solid grey;
   padding-top: 20px;
 }
 
-course-card.is-even {
+app-course-card.is-even {
   background: lightgray;
 }
 
-course-card.is-odd {
+app-course-card.is-odd {
   background: lightcyan;
 }
 

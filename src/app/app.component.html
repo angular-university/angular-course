@@ -1,26 +1,23 @@
 <div class="top-menu">
 
-    <img class="logo"
-         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+  <img class="logo"
+       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png" alt="">
 
 </div>
 
-
+<div class="demo">
+  <div class="date">{{startDate | date: 'MM/dd/yyyy'}}</div>
+</div>
 <div class="courses">
+  <app-course-card
+    *ngFor="let course of courses | slice: 0:3; index as i; first as isFirst;last as isLast;even as isEven;odd as isOdd;"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course" [cardIndex]="i+1"></app-course-card>
 
-    <div class="course-card">
-
-        <div class="course-title">
-            Angular Core Deep Dive
-        </div>
-        <img width="300" alt="Angular Logo"
-             src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png">
-
-        <div class="course-description">
-            A detailed walk-through of the most important part of Angular - the Core and Common modules.
-        </div>
-
-    </div>
+<!--  [class.is-first]="isFirst"-->
+<!--  [class.is-last]="isLast"-->
+<!--  [class.is-even]="isEven"-->
+<!--  [class.is-odd]="isOdd"-->
 
 </div>
 
