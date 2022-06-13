@@ -19,8 +19,7 @@ import {CourseTitleComponent} from './course-title/course-title.component';
         CoursesModule
     ],
     providers: [],
-    bootstrap: [AppComponent],
-    entryComponents: [CourseTitleComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 
