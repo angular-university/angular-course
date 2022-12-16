@@ -5,22 +5,13 @@
 
 </div>
 
-
 <div class="courses">
 
-    <div class="course-card">
+    <course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></course-card>
 
-        <div class="course-title">
-            Angular Core Deep Dive
-        </div>
-        <img width="300" alt="Angular Logo"
-             src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png">
+    <course-card [course]="rxjsCourse"></course-card>
 
-        <div class="course-description">
-            A detailed walk-through of the most important part of Angular - the Core and Common modules.
-        </div>
-
-    </div>
+    <course-card [course]="ngrxCourse"></course-card>
 
 </div>
 
