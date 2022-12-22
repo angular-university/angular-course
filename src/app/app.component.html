@@ -7,22 +7,16 @@
 
 <div class="courses">
 
-    <course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></course-card>
-    <!-- course is an @Input() property of the child component course-card. The square brackets is property binding. They bind the input property course to the value of 
-    the property coreCourse. This sends the value of coreCourse to the child component. Property binding gets the value from the TypeScript file in the same component as the HTML 
-    template file. when using property binding with an input property, the binding is set in the parent component's HTML template file. The input proerpty is in square brackets, 
-    and the property with the value for the input property is a proparty in the parent component's TypeScript file. -->
-
-    <!-- parentheses denote an event. It can be a standard event such as click or keyup, or it can be a custom event, such as here - courseSelected. The method that occurs upon the event 
-    is found in the current component's TypeScript file. -->
-
-    <!-- A custom event can be emitted from a child component using the @Output decorator. The event name comes from the child component's TypeScript file. The $event must be passed in
-    as a parameter to the nethod being run.  -->
-
-    <course-card (courseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></course-card>
-
-    <course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></course-card>
-
+    <course-card *ngFor="let course of courses;index as i; first as isFirst;last as isLast;even as isEven;odd as isOdd"
+        [class.is-first]="isFirst"
+        [class.is-last]="isLast"
+        [class.is-even]="isEven"
+        [class.is-odd]="isOdd"
+        (courseSelected)="onCourseSelected($event)" 
+        [course]="course" [cardIndex]="i + 1">
+    </course-card>
+    <!-- star indicates structural directive, allows change of page based on JavaScript expression -->
+    
 </div>
 
 

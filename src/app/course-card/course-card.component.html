@@ -1,10 +1,7 @@
 <div class="course-card">
 
     <div class="course-title">
-        {{ course.description }} <!-- double curly braces are interpolation. They are used to get the value of what's in the curly braces from the Typescript file for the HTML template 
-            (same compohent). 
-        In this case, the curly braces are getting the value of course.description from the input property course in thee course-card Typescript file. That input property is getting its 
-    values from the parent HTML template through property binding. And the HTML template is getting the values through the TypeScript file from the JSON file. -->
+        {{ cardIndex + ' ' + course.description }} 
     </div>
     <img width="300" alt="Angular Logo"
          [src]="course.iconUrl">
@@ -14,8 +11,6 @@
     </div>
 
     <button (click)="onCourseViewed()">View Course</button>
-    <!-- This is a standard browser event - click. When the click occurs, the method onCourseViewed() runs. That method issues a console log but also emits the object of the specific course 
-    being clicked on here. -->
 
 </div>
 
