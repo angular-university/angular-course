@@ -5,17 +5,14 @@
 
 </div>
 
-<div class="courses">
+<button (click)="onCoursesEdited()">Edit Courses</button>
 
-    <course-card *ngFor="let course of courses;index as i; first as isFirst;last as isLast;even as isEven;odd as isOdd"
-        [class.is-first]="isFirst"
-        [class.is-last]="isLast"
-        [class.is-even]="isEven"
-        [class.is-odd]="isOdd"
+<div class="courses" #container>
+
+    <course-card *ngFor="let course of courses"
         (courseSelected)="onCourseSelected($event)" 
-        [course]="course" [cardIndex]="i + 1">
+        [course]="course">
     </course-card>
-    <!-- star indicates structural directive, allows change of page based on JavaScript expression -->
     
 </div>
 
