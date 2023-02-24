@@ -5,15 +5,20 @@
 
 </div>
 
-<button (click)="onCoursesEdited()">Edit Courses</button>
+<div class="courses" *ngIf="courses[0] as course">
 
-<div class="courses" #container>
-
-    <course-card *ngFor="let course of courses"
+    <course-card
         (courseSelected)="onCourseSelected($event)" 
         [course]="course">
+
+        <course-image [src]="course.iconUrl"></course-image>
+
+        <div class="course-description">
+            {{ course.longDescription }}
+        </div>
+
     </course-card>
-    
+
 </div>
 
 
