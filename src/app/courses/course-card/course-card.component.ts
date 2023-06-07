@@ -12,13 +12,19 @@ import {
 } from '@angular/core';
 import {Course} from '../../model/course';
 import {CoursesService} from '../courses.service';
+import {CommonModule, NgIf} from '@angular/common';
 
 
 
 @Component({
-    selector: 'course-card',
-    templateUrl: './course-card.component.html',
-    styleUrls: ['./course-card.component.css']
+  selector: 'course-card',
+  templateUrl: './course-card.component.html',
+  styleUrls: ['./course-card.component.css'],
+  imports: [
+    NgIf
+  ],
+  standalone: true
+
 })
 export class CourseCardComponent implements  OnInit {
 
