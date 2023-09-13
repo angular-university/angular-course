@@ -9,13 +9,13 @@ import { CourseImageComponent } from '../course-image/course-image.component';
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class CourseCardComponent implements OnInit, AfterViewInit {
 
   @Input()
   course:Course;
 
-  @Input()
-  noImageTpl: TemplateRef<any>;
+  // @Input()
+  // noImageTpl: TemplateRef<any>;
 
   @Input()
   cardIndex: number;
@@ -23,13 +23,13 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
   @Output('courseSelected')
   courseEmitter = new EventEmitter<Course>();
 
-  @ContentChildren(CourseImageComponent, {read: ElementRef})
-  images: QueryList<ElementRef>;
+  // @ContentChildren(CourseImageComponent, {read: ElementRef})
+  // images: QueryList<ElementRef>;
 
   constructor() { }
-  ngAfterContentInit(): void {
-    console.log(this.images);
-  }
+  // ngAfterContentInit(): void {
+  //   console.log(this.images);
+  // }
 
   ngAfterViewInit() {
     }
@@ -41,6 +41,7 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
   }
 
   onCourseViewed() {
+    console.log("card component - button clicked...")
     this.courseEmitter.emit(this.course);
   }
 
@@ -58,10 +59,10 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     // }
   }
 
-  cardStyles() {
-    return {
-      'background-image': 'url(' + this.course.iconUrl + ')'
-    };
-  }
+  // cardStyles() {
+  //   return {
+  //     'background-image': 'url(' + this.course.iconUrl + ')'
+  //   };
+  // }
 
 }

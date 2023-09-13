@@ -8,14 +8,15 @@
 <div class="courses" *ngIf="courses[0] as course">
 
     <course-card
+        *ngFor="let course of courses;index as i;"
         (courseSelected)="onCourseSelected($event)" 
-        [course]="course">
+        [course]="course" [cardIndex]="i + 1">
 
-        <course-image [src]="course.iconUrl"></course-image>
+        <!-- <course-image [src]="course.iconUrl"></course-image>
 
         <div class="course-description">
             {{ course.longDescription }}
-        </div>
+        </div> -->
 
     </course-card>
 
