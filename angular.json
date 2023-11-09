@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-course": {
+      "i18n": {
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -63,24 +71,39 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "fr": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "outputPath": "dist/angular-course-fr/",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "ignore"
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-course:build"
+            "buildTarget": "angular-course:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-course:build:production"
+              "buildTarget": "angular-course:build:production"
+            },
+            "fr": {
+              "buildTarget": "angular-course:build:fr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-course:build"
+            "buildTarget": "angular-course:build"
           }
         },
         "test": {
@@ -126,6 +149,6 @@
     }
   },
   "cli": {
-    "analytics": "3ac3ddb5-53ee-4464-b4bb-1363d03123d0"
+    "analytics": "e878a578-eb4f-4c7c-bbaf-6f0c4ac42135"
   }
 }
