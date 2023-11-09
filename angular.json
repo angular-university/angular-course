@@ -41,10 +41,6 @@
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js",
                 "inject": true
-              },
-              {
-                "input": "node_modules/document-register-element/build/document-register-element.js",
-                "inject": true
               }
             ],
             "vendorChunk": true,
@@ -93,21 +89,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-course:build"
+            "buildTarget": "angular-course:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-course:build:production"
+              "buildTarget": "angular-course:build:production"
             },
             "fr": {
-              "browserTarget": "angular-course:build:fr"
+              "buildTarget": "angular-course:build:fr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-course:build"
+            "buildTarget": "angular-course:build"
           }
         },
         "test": {
