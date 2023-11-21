@@ -15,20 +15,20 @@ button {
 }
 
 
-.course-card.is-first {
+course-card.is-first {
   border-top: 2px solid grey;
   padding-top: 20px;
 }
 
-.course-card.is-last {
+course-card.is-last {
   border-bottom: 2px solid grey;
   padding-top: 20px;
 }
 
-.course-card.is-even {
+course-card.is-even {
   background: lightgray;
 }
 
-.course-card.is-odd {
+course-card.is-odd {
   background: lightcyan;
 }
