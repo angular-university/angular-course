@@ -7,18 +7,23 @@
 
 <div>
 
-
   <div class="courses">
 
-    <course-card [course]="coreCourse" (courseSelected)="onCourseSelected($event)"></course-card>
+    @for (course of courses; track $index; let count = $count) {
 
-    <course-card [course]="rxjsCourse" (courseSelected)="onCourseSelected($event)"></course-card>
+      <course-card
+        [course]="course"
+        [index]="$index"
+        (courseSelected)="onCourseSelected($event)" />
 
-    <course-card [course]="ngrxCourse" (courseSelected)="onCourseSelected($event)"></course-card>
+    }
+    @empty {
 
+      <h1>No courses found!</h1>
+
+    }
 
   </div>
-
 
 </div>
 

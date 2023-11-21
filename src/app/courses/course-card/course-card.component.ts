@@ -13,24 +13,17 @@ import {NgIf} from '@angular/common';
   standalone: true
 
 })
-export class CourseCardComponent implements  OnInit {
+export class CourseCardComponent {
 
     @Input()
     course: Course;
 
+    @Input({required:true})
+    index: number;
+
     @Output('courseSelected')
     courseEmitter = new EventEmitter<Course>();
 
-
-    constructor() {
-
-
-    }
-
-    ngOnInit() {
-
-
-    }
 
     onCourseViewed() {
 
