@@ -3,23 +3,6 @@
   display: block;
 }
 
-:host.is-first {
-  border-top: 2px solid grey;
-  padding-top: 20px;
-}
-
-:host.is-last {
-  border-bottom: 2px solid grey;
-  padding-top: 20px;
-}
-
-:host.is-even {
-  background: lightgray;
-}
-
-:host.is-odd {
-  background: lightcyan;
-}
 
 :host-context(.salmon-theme) .course-card {
   background: lightsalmon;
