@@ -1,14 +1,7 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, Injector, OnInit} from '@angular/core';
-import {Course} from './model/course';
-import {Observable} from 'rxjs';
-import {AppConfig, CONFIG_TOKEN} from './config';
-import {COURSES} from '../db-data';
-import {CoursesService} from './courses/courses.service';
-import {createCustomElement} from '@angular/elements';
-import {CourseTitleComponent} from './course-title/course-title.component';
+import {Component} from '@angular/core';
 import {CourseCardComponent} from './courses/course-card/course-card.component';
-import {CourseImageComponent} from './courses/course-image/course-image.component';
-import {NgForOf} from '@angular/common';
+import {COURSES} from '../db-data';
+import {Course} from './model/course';
 
 
 @Component({
@@ -16,45 +9,23 @@ import {NgForOf} from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [
-    CourseCardComponent,
-    CourseImageComponent,
-    NgForOf
+    CourseCardComponent
   ],
   standalone: true
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
-    courses: Course[] = COURSES;
+    coreCourse = COURSES[0];
 
-    coursesTotal = this.courses.length;
+    rxjsCourse = COURSES[1];
 
-    constructor(
-        private coursesService: CoursesService,
-        @Inject(CONFIG_TOKEN) private config: AppConfig,
-        private injector: Injector) {
+    ngrxCourse = COURSES[2];
 
-    }
+  onCourseSelected(course: Course) {
 
-    ngOnInit() {
+    console.log("App component - click event bubble", course);
 
-        //const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
-
-        //customElements.define('course-title', htmlElement);
-
-    }
-
-    onEditCourse() {
-
-            this.courses[1].category = 'ADVANCED';
-
-    }
-
-    save(course: Course) {
-        this.coursesService.saveCourse(course)
-            .subscribe(
-                () => console.log('Course Saved!')
-            );
-    }
+  }
 
 
 }

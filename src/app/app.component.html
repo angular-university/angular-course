@@ -7,23 +7,14 @@
 
 <div>
 
-  <div class="demo">
-
-
-      <button (click)="onEditCourse()" i18n>Edit Course</button>
-
-  </div>
 
   <div class="courses">
 
-    <course-card *ngFor="let course of  courses  "
-                 (courseChanged)="save($event)"
-                 type="beginner"
-                 [course]="course">
+    <course-card [course]="coreCourse" (courseSelected)="onCourseSelected($event)"></course-card>
 
-      <course-image [src]="course.iconUrl"></course-image>
+    <course-card [course]="rxjsCourse"></course-card>
 
-    </course-card>
+    <course-card [course]="ngrxCourse"></course-card>
 
 
   </div>

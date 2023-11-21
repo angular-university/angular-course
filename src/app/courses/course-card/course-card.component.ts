@@ -1,19 +1,6 @@
-import {
-    AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
-    Attribute,
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component, DoCheck,
-    EventEmitter,
-    Input, OnChanges,
-    OnDestroy,
-    OnInit,
-    Output
-} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Course} from '../../model/course';
-import {CoursesService} from '../courses.service';
-import {CommonModule, NgIf} from '@angular/common';
-
+import {NgIf} from '@angular/common';
 
 
 @Component({
@@ -31,17 +18,11 @@ export class CourseCardComponent implements  OnInit {
     @Input()
     course: Course;
 
-    @Input()
-    cardIndex: number;
-
-    @Output('courseChanged')
+    @Output('courseSelected')
     courseEmitter = new EventEmitter<Course>();
 
 
-
-
-    constructor(private coursesService: CoursesService,
-                @Attribute('type') private type: string) {
+    constructor() {
 
 
     }
@@ -51,18 +32,10 @@ export class CourseCardComponent implements  OnInit {
 
     }
 
+    onCourseViewed() {
 
-
-    onTitleChanged(newTitle: string) {
-
-        this.course.description = newTitle;
-
-    }
-
-
-    onSaveClicked(description: string) {
-
-        this.courseEmitter.emit({...this.course, description});
+      console.log('Card component - button clicked ...');
+      this.courseEmitter.emit(this.course);
 
     }
 
