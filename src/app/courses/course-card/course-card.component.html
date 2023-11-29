@@ -1,13 +1,37 @@
 <div class="course-card">
 
   <div class="course-title">
-    {{index}} {{course.description}}
+    {{course.description}}
   </div>
 
   <img [src]="course.iconUrl" alt="Angular logo" width="300">
 
   <div class="course-description">
     {{course.longDescription}}
+  </div>
+
+  <div class="course-category">
+
+    @switch(course.category) {
+
+      @case ("BEGINNER") {
+        <div class="category">Beginner</div>
+      }
+
+      @case ("INTERMEDIATE") {
+        <div class="category">Intermediate</div>
+      }
+
+      @case ("ADVANCED") {
+        <div class="category">Advanced</div>
+      }
+      @default {
+        <div class="category">Unknown</div>
+      }
+
+
+    }
+
   </div>
 
   <button (click)="onCourseViewed()">View Course</button>
