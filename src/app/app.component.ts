@@ -17,6 +17,10 @@ export class AppComponent  {
 
     courses = [...COURSES];
 
+  performPrefetch: boolean = false;
+
+  display: boolean = false;
+
 
   onCourseSelected(course: Course) {
 
@@ -29,4 +33,11 @@ export class AppComponent  {
   }
 
 
+  onPrefetch() {
+    this.performPrefetch = true;
+  }
+
+  onDisplay() {
+    this.display = true;
+  }
 }

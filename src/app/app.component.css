@@ -15,7 +15,11 @@
     padding-bottom: 100px;
 }
 
-
-
-
+.demo-triggers {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
 
