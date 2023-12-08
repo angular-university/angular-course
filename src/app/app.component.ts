@@ -26,20 +26,11 @@ export class AppComponent implements OnInit {
 
     courses: Course[] = COURSES;
 
-    coursesTotal = this.courses.length;
-
-    constructor(
-        private coursesService: CoursesService,
-        @Inject(CONFIG_TOKEN) private config: AppConfig,
-        private injector: Injector) {
+    constructor(private coursesService: CoursesService) {
 
     }
 
     ngOnInit() {
-
-        //const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
-
-        //customElements.define('course-title', htmlElement);
 
     }
 
