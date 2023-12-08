@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, Injector, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, Injector, OnInit, signal} from '@angular/core';
 import {Course} from './model/course';
 import {Observable} from 'rxjs';
 import {AppConfig, CONFIG_TOKEN} from './config';
@@ -22,30 +22,16 @@ import {NgForOf} from '@angular/common';
   ],
   standalone: true
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-    courses: Course[] = COURSES;
+    counter: number = 0;
 
-    constructor(private coursesService: CoursesService) {
-
-    }
-
-    ngOnInit() {
+    constructor() {
 
     }
 
-    onEditCourse() {
-
-            this.courses[1].category = 'ADVANCED';
-
-    }
-
-    save(course: Course) {
-        this.coursesService.saveCourse(course)
-            .subscribe(
-                () => console.log('Course Saved!')
-            );
-    }
-
+  increment() {
+    this.counter++;
+  }
 
 }

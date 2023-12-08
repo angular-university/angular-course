@@ -9,14 +9,9 @@
 
   <div class="courses">
 
-    <course-card *ngFor="let course of  courses"
-                 (courseChanged)="save($event)"
-                 [course]="course">
+    <div>Counter value: {{ counter }}</div>
 
-      <course-image [src]="course.iconUrl"></course-image>
-
-    </course-card>
-
+    <button (click)="increment()">Increment</button>
 
   </div>
 
