@@ -24,14 +24,21 @@ import {NgForOf} from '@angular/common';
 })
 export class AppComponent {
 
-    counter: number = 0;
+    counter = signal(0);
 
-    constructor() {
+    course = signal({
+      id:1,
+      title: "Angular For Beginners"
+    });
 
-    }
+    courses = signal([
+      "Angular",
+      "Framework"
+    ]);
 
   increment() {
-    this.counter++;
+
+      this.counter.update(val => val + 1);
   }
 
 }
