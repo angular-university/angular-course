@@ -38,20 +38,10 @@ export class CourseCardComponent implements  OnInit {
     courseEmitter = new EventEmitter<Course>();
 
 
-
-
-    constructor(private coursesService: CoursesService,
-                @Attribute('type') private type: string) {
-
-
-    }
-
     ngOnInit() {
 
 
     }
-
-
 
     onTitleChanged(newTitle: string) {
 
