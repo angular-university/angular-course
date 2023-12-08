@@ -5,20 +5,10 @@
 
 </div>
 
-<div style="border:5px solid red; min-height: 200px; margin: 10px; padding:10px">
 
-  <button (click)="onPrefetch()">Trigger Prefetch</button>
-
-  <button (click)="onDisplay()">Trigger Display</button>
-
-</div>
 
 
 <div>
-
-  @defer(when display; prefetch when performPrefetch) {
-
-    <div class="courses">
 
       @for (course of courses; track $index; let count = $count) {
 
@@ -28,27 +18,7 @@
           (courseSelected)="onCourseSelected($event)" />
 
       }
-
-    </div>
-
-  }
-  @placeholder {
-
-    <h2>This is the placeholder!</h2>
-
-  }
-  @loading {
-
-    <h2>This is a loading indicator...</h2>
-
-  }
-  @error {
-
-    <h2>An error occurred.</h2>
-
-  }
-
-
+  
 </div>
 
 
