@@ -9,13 +9,11 @@
 
   <div class="courses">
 
-    <div>Counter value: {{ counter() }}</div>
+    <div>Counter value: {{ counterService.counter() }}</div>
 
     <div>Derived value: {{ derivedCounter() }}</div>
 
     <button (click)="increment()">Increment</button>
-
-    <button (click)="onCleanup()">Cleanup</button>
 
   </div>
 

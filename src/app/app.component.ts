@@ -2,6 +2,7 @@ import {Component, computed, effect, EffectRef, signal} from '@angular/core';
 import {CourseCardComponent} from './courses/course-card/course-card.component';
 import {CourseImageComponent} from './courses/course-image/course-image.component';
 import {NgForOf} from '@angular/common';
+import {CounterService} from './counter.service';
 
 
 @Component({
@@ -17,50 +18,23 @@ import {NgForOf} from '@angular/common';
 })
 export class AppComponent {
 
-  counter = signal(0);
-
   derivedCounter = computed(() => {
 
-    const counter = this.counter();
+    const counter = this.counterService.counter();
 
     return counter * 10;
 
   });
 
-  effectRef: EffectRef;
-
-  constructor() {
-
-    this.effectRef = effect((onCleanup) => {
-
-      onCleanup(() => {
-
-
-        console.log(`Cleanup occurred!`);
-
-      });
-
-      const counterValue = this.counter();
-
-      const derivedCounterValue = this.derivedCounter();
-
-      console.log(` counter: ${counterValue} derived counter: ${derivedCounterValue}`);
-
-    },
-      {
-        manualCleanup: true
-      });
+  constructor(
+    public counterService: CounterService) {
 
   }
 
   increment() {
 
-    this.counter.update(val => val + 1);
+    this.counterService.increment();
 
   }
 
-
-  onCleanup() {
-    this.effectRef.destroy();
-  }
 }
