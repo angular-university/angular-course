@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, Injector, OnInit, signal} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, DoCheck, Inject, Injector, OnInit, signal} from '@angular/core';
 import {Course} from './model/course';
 import {Observable} from 'rxjs';
 import {AppConfig, CONFIG_TOKEN} from './config';
@@ -24,21 +24,20 @@ import {NgForOf} from '@angular/common';
 })
 export class AppComponent {
 
-    counter = signal(0);
+  counter = signal(0);
 
-    course = signal({
-      id:1,
-      title: "Angular For Beginners"
-    });
+  derivedCounter = computed(() => {
 
-    courses = signal([
-      "Angular",
-      "Framework"
-    ]);
+    const counter = this.counter();
+
+    return counter * 10;
+
+  });
 
   increment() {
 
-      this.counter.update(val => val + 1);
+    this.counter.update(val => val + 1);
+
   }
 
 }
