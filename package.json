@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "ts-node -P ./server.tsconfig.json ./server.ts"
+    "server": "ts-node -P ./server.tsconfig.json ./backend.ts"
   },
   "private": true,
   "dependencies": {
