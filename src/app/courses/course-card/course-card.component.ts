@@ -1,14 +1,14 @@
 import {
-    AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
-    Attribute,
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component, DoCheck,
-    EventEmitter,
-    Input, OnChanges,
-    OnDestroy,
-    OnInit,
-    Output
+  AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
+  Attribute,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component, DoCheck,
+  EventEmitter, input,
+  Input, OnChanges,
+  OnDestroy,
+  OnInit,
+  Output
 } from '@angular/core';
 import {Course} from '../../model/course';
 import {CoursesService} from '../courses.service';
@@ -28,11 +28,9 @@ import {CommonModule, NgIf} from '@angular/common';
 })
 export class CourseCardComponent implements  OnInit {
 
-    @Input()
-    course: Course;
+    course = input<Course>();
 
-    @Input()
-    cardIndex: number;
+    cardIndex = input<number>();
 
     @Output('courseChanged')
     courseEmitter = new EventEmitter<Course>();
@@ -45,14 +43,14 @@ export class CourseCardComponent implements  OnInit {
 
     onTitleChanged(newTitle: string) {
 
-        this.course.description = newTitle;
+        this.course().description = newTitle;
 
     }
 
 
     onSaveClicked(description: string) {
 
-        this.courseEmitter.emit({...this.course, description});
+        this.courseEmitter.emit({...this.course(), description});
 
     }
 
