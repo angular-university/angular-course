@@ -1,19 +1,18 @@
 import {
-    AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
-    Attribute,
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component, DoCheck,
-    EventEmitter,
-    Input, OnChanges,
-    OnDestroy,
-    OnInit,
-    Output
+  AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
+  Attribute,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component, computed, DoCheck, effect,
+  EventEmitter, input,
+  Input, OnChanges,
+  OnDestroy,
+  OnInit,
+  Output, SimpleChanges
 } from '@angular/core';
 import {Course} from '../../model/course';
 import {CoursesService} from '../courses.service';
 import {CommonModule, NgIf} from '@angular/common';
-
 
 
 @Component({
@@ -26,32 +25,34 @@ import {CommonModule, NgIf} from '@angular/common';
   standalone: true
 
 })
-export class CourseCardComponent implements  OnInit {
+export class CourseCardComponent {
 
-    @Input()
-    course: Course;
+  course = input<Course>(null);
 
-    @Output('courseChanged')
-    courseEmitter = new EventEmitter<Course>();
+  constructor() {
 
+    effect(() => {
 
-    ngOnInit() {
+      console.log(`New course value: `, this.course());
 
+    });
 
-    }
+  }
 
-    onTitleChanged(newTitle: string) {
+  @Output('courseChanged')
+  courseEmitter = new EventEmitter<Course>();
 
-        this.course.description = newTitle;
+  onTitleChanged(newTitle: string) {
 
-    }
+    this.course().description = newTitle;
 
+  }
 
-    onSaveClicked(description: string) {
+  onSaveClicked(description: string) {
 
-        this.courseEmitter.emit({...this.course, description});
+    this.courseEmitter.emit({...this.course(), description});
 
-    }
+  }
 
 
 }

@@ -11,9 +11,9 @@
 
     @for(course of courses; track course.id)  {
 
-      <course-card [course]="course">
+      <course-card [tutorial]="course">
 
-        <course-image [src]="course.iconUrl"></course-image>
+        <course-image [src]="course.iconUrl" />
 
       </course-card>
 
