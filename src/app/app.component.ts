@@ -3,6 +3,7 @@ import {CourseCardComponent} from './courses/course-card/course-card.component';
 import {CourseImageComponent} from './courses/course-image/course-image.component';
 import {NgForOf} from '@angular/common';
 import {CounterService} from './counter.service';
+import {COURSES} from '../db-data';
 
 
 @Component({
@@ -17,6 +18,8 @@ import {CounterService} from './counter.service';
   standalone: true
 })
 export class AppComponent {
+
+  courses = COURSES;
 
   derivedCounter = computed(() => {
 

@@ -9,11 +9,15 @@
 
   <div class="courses">
 
-    <div>Counter value: {{ counterService.counter() }}</div>
+    @for(course of courses; track course.id)  {
 
-    <div>Derived value: {{ derivedCounter() }}</div>
+      <course-card [course]="course">
 
-    <button (click)="increment()">Increment</button>
+        <course-image [src]="course.iconUrl"></course-image>
+
+      </course-card>
+
+    }
 
   </div>
 
