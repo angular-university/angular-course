@@ -1,4 +1,38 @@
-<div class="course-card" *ngIf="course" #container>
+<div class="course-card">
+
+  <div class="course-title">
+      {{course.description}}
+  </div>
+
+  <img [src]="course.iconUrl" alt="Angular logo" width="300">
+
+  <div class="course-description">
+    {{course.longDescription}}
+
+  </div>
+
+  <button (click)="onCourseViewed()">View Course</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="course-card" *ngIf="course" #container>
 
   <div class="course-title">
 
@@ -35,7 +69,7 @@
 
   <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
 
-</div>
+</div>-->
 
 
 

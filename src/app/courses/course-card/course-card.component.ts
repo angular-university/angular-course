@@ -67,4 +67,7 @@ export class CourseCardComponent implements  OnInit {
     }
 
 
+  onCourseViewed() {
+
+  }
 }
