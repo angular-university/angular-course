@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import {Course} from '../../model/course';
 import {CoursesService} from '../courses.service';
-import {CommonModule, NgIf} from '@angular/common';
+import {CommonModule} from '@angular/common';
 
 
 
@@ -21,7 +21,7 @@ import {CommonModule, NgIf} from '@angular/common';
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css'],
   imports: [
-    NgIf
+    CommonModule
   ],
   standalone: true
 

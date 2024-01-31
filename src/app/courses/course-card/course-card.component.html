@@ -1,10 +1,13 @@
 <div class="course-card">
 
   <div class="course-title">
-      {{course.description}}
+    {{course.description}}
   </div>
 
+  @if(course.iconUrl) {
   <img [src]="course.iconUrl" alt="Angular logo" width="300">
+  }
+
 
   <div class="course-description">
     {{course.longDescription}}
@@ -14,22 +17,6 @@
   <button (click)="onCourseViewed()">View Course</button>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--<div class="course-card" *ngIf="course" #container>
