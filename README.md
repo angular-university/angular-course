@@ -7,8 +7,6 @@ This course repository is updated to Angular 17:
 
 ![Angular Core Deep Dive](https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-core-deep-dive-new-2.jpg)
 
-https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png
-
 # Installation pre-requisites
 
 IMPORTANT: Please use Node 18 (Long Term Support version). 
