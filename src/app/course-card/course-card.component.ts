@@ -21,17 +21,12 @@ export class CourseCardComponent {
   @Input()
   course: Course;
 
+  @Input()
+  cardIndex: number;
+
   @Output('courseSelected')
 
   courseSelected = new EventEmitter<Course>();
-
-  onCourseViewed() {
-
-    console.log("card component - button clicked ...")
-
-    this.courseSelected.emit(this.course)
-
-  }
   
   constructor() {
 
@@ -40,6 +35,13 @@ export class CourseCardComponent {
 
   }
 
+  onCourseViewed() {
+
+    console.log("card component - button clicked ...")
+
+    this.courseSelected.emit(this.course)
+
+  }
 
 }
 
