@@ -47,6 +47,25 @@ export class CourseCardComponent {
 
   }
 
+  cardClasses() {
+    if (this.course.category === 'BEGINNER') {
+      return 'beginner';
+    }
+  }
+
 }
 
+  // cardClasses() {
+  //   return {
+  //     'beginner': this.course.category === 'BEGINNER',
+  //     'course-card': true
+  //   }
+  // }
+
+  // cardClasses() {
+  //   return {
+  //     'beginner': true,
+  //     'course-card': true
+  //   }
+  // }
 
