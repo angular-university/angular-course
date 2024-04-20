@@ -1,11 +1,23 @@
 <div class="course-card" *ngIf="course"
     [ngClass]="cardClasses()">
-<!-- 
-    [ngClass]="{'beginner':true, 'course-card': true}"> -->
+
+    <!-- <div class="course-card" *ngIf="course"
+    [ngClass]="cardClasses()"
+    [ngStyle]="cardStyles()"> -->
+
 
     <div class="course-title">
         {{ cardIndex + ' ' + course.description }}
     </div>
+
+    <!-- <div class="course-title" [ngStyle]="{'text-decoration': 'underline'}">
+        {{ cardIndex + ' ' + course.description }}
+    </div> -->
+
+    <!-- <div class="course-title" [style.text-decoration]="'underline'">
+        {{ cardIndex + ' ' + course.description }}
+    </div> -->
+
     <img width="300" alt="Angular Logo" 
     *ngIf="isImageVisible(); else noImage"
         [src]="course.iconUrl">
