@@ -1,34 +1,36 @@
-<div class="course-card" *ngIf="course"
-    [ngClass]="cardClasses()">
-
-    <!-- <div class="course-card" *ngIf="course"
-    [ngClass]="cardClasses()"
-    [ngStyle]="cardStyles()"> -->
-
+<div class="course-card">
 
     <div class="course-title">
-        {{ cardIndex + ' ' + course.description }}
+        {{ course.description }}
     </div>
 
-    <!-- <div class="course-title" [ngStyle]="{'text-decoration': 'underline'}">
-        {{ cardIndex + ' ' + course.description }}
-    </div> -->
-
-    <!-- <div class="course-title" [style.text-decoration]="'underline'">
-        {{ cardIndex + ' ' + course.description }}
-    </div> -->
-
-    <img width="300" alt="Angular Logo" 
-    *ngIf="isImageVisible(); else noImage"
-        [src]="course.iconUrl">
-
-    <ng-template #noImage>
-        <p>No image available!</p>
-    </ng-template>
-
+    <img [src]="course.iconUrl" alt="Angular logo" width="300">
 
     <div class="course-description">
         {{ course.description }}
+    </div>
+
+    <div class="course-category">
+
+        @switch (course.category) {
+
+            @case ("BEGINNER") {
+                <div class="category">Beginner</div>
+            }
+
+            @case ("INTERMEDIATE") {
+                <div class="category">Intermediate</div>
+            }
+
+            @case ("ADVANCED") {
+                <div class="category">Advanced</div>
+            }
+
+            @default {
+                <div class="category">Unknown</div>
+            }
+        }
+
     </div>
 
     <button (click)="onCourseViewed()">View course</button>

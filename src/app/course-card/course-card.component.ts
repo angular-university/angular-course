@@ -47,17 +47,17 @@ export class CourseCardComponent {
 
   }
 
-  cardClasses() {
-    if (this.course.category === 'BEGINNER') {
-      return 'beginner';
-    }
-  }
+  // cardClasses() {
+  //   if (this.course.category === 'BEGINNER') {
+  //     return 'beginner';
+  //   }
+  // }
 
-  cardStyles() {
-    return {
-      'background-image': 'url(' + this.course.iconUrl + ')'
-    }
-  }
+  // cardStyles() {
+  //   return {
+  //     'background-image': 'url(' + this.course.iconUrl + ')'
+  //   }
+  // }
 
   // cardStyles() {
   //   return {
