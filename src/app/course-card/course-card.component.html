@@ -1,7 +1,7 @@
 <div class="course-card" *ngIf="course">
 
     <div class="course-title">
-        {{ cardIndex + ' ' + course?.description }}
+        {{ cardIndex + ' ' + course.description }}
     </div>
     <img width="300" alt="Angular Logo" 
     *ngIf="isImageVisible(); else noImage"
@@ -13,7 +13,7 @@
 
 
     <div class="course-description">
-        {{ course?.description }}
+        {{ course.description }}
     </div>
 
     <button (click)="onCourseViewed()">View course</button>
