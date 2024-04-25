@@ -1,7 +1,7 @@
 <div class="course-card" *ngIf="course">
 
     <div class="course-title">
-        {{ cardIndex + ' ' + course.description }}
+        {{ cardIndex + ' ' + course?.description }}
     </div>
     <img width="300" alt="Angular Logo" 
     *ngIf="isImageVisible(); else noImage"
@@ -13,7 +13,17 @@
 
 
     <div class="course-description">
-        {{ course.description }}
+        {{ course?.description }}
+    </div>
+
+    <div class="course-category" [ngSwitch]="course.category">
+
+        <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div> 
+
+        <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div> 
+
+        <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div> 
+
     </div>
 
     <button (click)="onCourseViewed()">View course</button>
