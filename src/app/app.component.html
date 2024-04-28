@@ -7,7 +7,7 @@
 
 <div>
 
-  <div class="courses">
+  <div class="courses" *ngIf="courses$ | async as courses">
 
     <course-card *ngFor="let course of courses"
                  [course]="course">
