@@ -3,13 +3,13 @@
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
-This course repository is updated to Angular v17:
+This course repository is updated to Angular v18:
 
 ![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
 
 # Installation pre-requisites
 
-IMPORTANT: Please use Node 18 (Long Term Support version). 
+IMPORTANT: Please use Node 18 LTS (Long Term Support version). 
 
 # Installing the Angular CLI
 
