@@ -17,7 +17,8 @@ import {CourseImageComponent} from '../course-image/course-image.component';
 @Component({
     selector: 'course-card',
     templateUrl: './course-card.component.html',
-    styleUrls: ['./course-card.component.css']
+    styleUrls: ['./course-card.component.css'],
+    standalone: false
 })
 export class CourseCardComponent implements OnInit {
 

@@ -2,7 +2,8 @@ import {Directive, EventEmitter, HostBinding, HostListener, Input, Output} from 
 
 @Directive({
     selector: '[highlighted]',
-    exportAs: 'hl'
+    exportAs: 'hl',
+    standalone: false
 })
 export class HighlightedDirective {
 
