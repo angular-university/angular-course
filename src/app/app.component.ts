@@ -12,15 +12,14 @@ import {NgForOf} from '@angular/common';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  imports: [
-    CourseCardComponent,
-    CourseImageComponent,
-    NgForOf
-  ],
-  standalone: true
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    imports: [
+        CourseCardComponent,
+        CourseImageComponent,
+        NgForOf
+    ]
 })
 export class AppComponent implements OnInit {
 

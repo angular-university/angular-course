@@ -17,14 +17,12 @@ import {CommonModule, NgIf} from '@angular/common';
 
 
 @Component({
-  selector: 'course-card',
-  templateUrl: './course-card.component.html',
-  styleUrls: ['./course-card.component.css'],
-  imports: [
-    NgIf
-  ],
-  standalone: true
-
+    selector: 'course-card',
+    templateUrl: './course-card.component.html',
+    styleUrls: ['./course-card.component.css'],
+    imports: [
+        NgIf
+    ]
 })
 export class CourseCardComponent implements  OnInit {
 
