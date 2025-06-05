@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-course": {
+      "i18n": {
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -63,6 +71,20 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true
+            },
+            "fr": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "outputPath": {
+                "base": "dist/angular-course-fr/"
+              },
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "ignore"
             }
           }
         },
@@ -74,6 +96,9 @@
           "configurations": {
             "production": {
               "buildTarget": "angular-course:build:production"
+            },
+            "fr": {
+              "buildTarget": "angular-course:build:fr"
             }
           }
         },
@@ -126,6 +151,32 @@
     }
   },
   "cli": {
-    "analytics": "f1c06a76-7ca0-486f-aa03-e6051586f3c1"
+    "analytics": "e878a578-eb4f-4c7c-bbaf-6f0c4ac42135"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
+    }
   }
 }
