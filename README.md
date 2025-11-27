@@ -3,7 +3,7 @@
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
-This course repository is updated to Angular 20:
+This course repository is updated to Angular 21:
 
 ![Angular Core Deep Dive](https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-core-deep-dive-new-2.jpg)
 

@@ -1,20 +1,20 @@
 <div class="top-menu">
 
   <img class="logo"
-       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+    src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
-</div>
+  </div>
 
-<div>
+  <div>
 
-  <div class="courses">
+    <div class="courses">
 
-    <course-card *ngFor="let course of courses"
-                 [course]="course">
-
-      <course-image [src]="course.iconUrl"></course-image>
-
-    </course-card>
+      @for (course of courses; track course) {
+        <course-card
+          [course]="course">
+        <course-image [src]="course.iconUrl"></course-image>
+      </course-card>
+    }
 
   </div>
 

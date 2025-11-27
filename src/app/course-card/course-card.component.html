@@ -1,31 +1,31 @@
-<div class="course-card" *ngIf="course" #container>
-
-  <div class="course-title">
-    {{ cardIndex || '' + ' ' + course.description }}
+@if (course) {
+  <div class="course-card" #container>
+    <div class="course-title">
+      {{ cardIndex || '' + ' ' + course.description }}
+    </div>
+    @if (course.iconUrl) {
+      <ng-content select="course-image"
+      ></ng-content>
+    }
+    <div class="course-description">
+      Edit Title: <input #courseTitle [value]="course.description">
+    </div>
+    <div class="course-category">
+      @switch (course.category) {
+        @case ('BEGINNER') {
+          <div class="category">Beginner</div>
+        }
+        @case ('INTERMEDIATE') {
+          <div class="category">Intermediate</div>
+        }
+        @case ('ADVANCED') {
+          <div class="category">Advanced</div>
+        }
+      }
+    </div>
+    <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
   </div>
-
-  <ng-content select="course-image"
-              *ngIf="course.iconUrl"></ng-content>
-
-  <div class="course-description">
-
-    Edit Title: <input #courseTitle [value]="course.description">
-
-  </div>
-
-  <div class="course-category" [ngSwitch]="course.category">
-
-    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
-
-    <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
-
-    <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
-
-  </div>
-
-  <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
-
-</div>
+}
 
 
 
