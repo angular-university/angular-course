@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import {Course} from '../../model/course';
 import {CoursesService} from '../courses.service';
-import {CommonModule, NgIf} from '@angular/common';
+
 
 
 
@@ -20,9 +20,7 @@ import {CommonModule, NgIf} from '@angular/common';
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css'],
-    imports: [
-        NgIf
-    ]
+    imports: []
 })
 export class CourseCardComponent implements  OnInit {
 

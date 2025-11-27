@@ -1,4 +1,4 @@
-import {enableProdMode, importProvidersFrom} from '@angular/core';
+import {enableProdMode, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { environment } from './environments/environment';
@@ -13,7 +13,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(BrowserModule),
+    provideZoneChangeDetection(),importProvidersFrom(BrowserModule),
     provideAnimations(),
     provideHttpClient(withInterceptorsFromDi())
   ],

@@ -8,7 +8,7 @@ import {createCustomElement} from '@angular/elements';
 import {CourseTitleComponent} from './course-title/course-title.component';
 import {CourseCardComponent} from './courses/course-card/course-card.component';
 import {CourseImageComponent} from './courses/course-image/course-image.component';
-import {NgForOf} from '@angular/common';
+
 
 
 @Component({
@@ -16,10 +16,9 @@ import {NgForOf} from '@angular/common';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     imports: [
-        CourseCardComponent,
-        CourseImageComponent,
-        NgForOf
-    ]
+    CourseCardComponent,
+    CourseImageComponent
+]
 })
 export class AppComponent implements OnInit {
 

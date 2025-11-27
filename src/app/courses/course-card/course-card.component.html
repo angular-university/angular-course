@@ -1,24 +1,18 @@
-<div class="course-card" *ngIf="course" #container>
-
-  <div class="course-title">
-
+@if (course) {
+  <div class="course-card" #container>
+    <div class="course-title">
       {{ cardIndex || '' + ' ' + course.description }}
-
-  </div>
-
-  <ng-content select="course-image"
-              *ngIf="course.iconUrl"></ng-content>
-
-  <div class="course-description">
-
-    Edit Title: <input #courseTitle [value]="course.description"
-                       (keyup)="onTitleChanged(courseTitle.value)">
-
-  </div>
-
-  <div class="course-category">
-
-    <div class="category" i18n>
+    </div>
+    @if (course.iconUrl) {
+      <ng-content select="course-image"
+      ></ng-content>
+    }
+    <div class="course-description">
+      Edit Title: <input #courseTitle [value]="course.description"
+      (keyup)="onTitleChanged(courseTitle.value)">
+    </div>
+    <div class="course-category">
+      <div class="category" i18n>
 
         {
             course.category,
@@ -29,13 +23,10 @@
         }
 
     </div>
-
-
   </div>
-
   <button (click)="onSaveClicked(courseTitle.value)">Save Course</button>
-
 </div>
+}
 
 
 
