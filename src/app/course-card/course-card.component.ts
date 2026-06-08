@@ -1,15 +1,16 @@
 import {
-    AfterContentInit,
-    AfterViewInit,
-    Component,
-    ContentChild,
-    ContentChildren,
-    ElementRef,
-    EventEmitter,
-    Input,
-    OnInit,
-    Output, QueryList, TemplateRef,
-    ViewChild
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  ContentChild,
+  ContentChildren,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output, QueryList, TemplateRef,
+  ViewChild,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import {COURSES} from '../../db-data';
 import {Course} from '../model/course';
@@ -19,6 +20,7 @@ import {CourseImageComponent} from '../course-image/course-image.component';
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentInit {
