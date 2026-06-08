@@ -20,6 +20,7 @@ import {CoursesService} from '../courses.service';
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: []
 })
 export class CourseCardComponent implements  OnInit {
